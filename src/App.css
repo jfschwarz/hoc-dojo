@@ -18,6 +18,22 @@
   font-size: large;
 }
 
+.form {
+  width: 500px;
+  margin: 50px auto;
+  text-align: left;
+}
+
+table {
+  width: 500px;
+  margin: 0 auto;
+}
+
+td {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
