@@ -1,12 +1,10 @@
 import React from 'react'
 
-const Text = ({ onChange, style, ...rest }) => (
+// DO NOT CHANGE THIS COMPONENT
+const Text = ({ onChange, ...rest }) => (
   <input
     type="text"
     {...rest}
-    style={{
-      ...style,
-    }}
     onChange={(ev) => {
       if (onChange) {
         onChange(ev.target.value, ev)

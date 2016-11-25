@@ -1,11 +1,9 @@
 import React from 'react'
 
-const Textarea = ({ value, style, onChange, ...rest }) => (
+// DO NOT CHANGE THIS COMPONENT
+const Textarea = ({ value, onChange, ...rest }) => (
   <textarea
     {...rest}
-    style={{
-      ...style,
-    }}
     onChange={(ev) => {
       if (onChange) {
         onChange(ev.target.value, ev)
