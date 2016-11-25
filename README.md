@@ -1,3 +1,15 @@
+#### Setup
+
+Prerequisites: node >=4, npm >=3
+
+```
+git clone https://github.com/jfschwarz/hoc-dojo.git
+cd hoc-dojo
+npm install
+npm start
+```
+
+
 ### Task 1: Labels
 
 Each field in the example form has a `label` prop. Render these labels.
