@@ -1,3 +1,6 @@
-import { Text } from './base'
+import { Text } from './base';
+import enhanceWithLabel from './enhanceWithLabel';
 
-export default Text
+const TextWithLabel = enhanceWithLabel(Text);
+
+export default TextWithLabel

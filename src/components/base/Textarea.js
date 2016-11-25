@@ -1,7 +1,7 @@
 import React from 'react'
 
 // DO NOT CHANGE THIS COMPONENT
-const Textarea = ({ value, onChange, ...rest }) => (
+const Textarea = ({ onChange, ...rest }) => (
   <textarea
     {...rest}
     onChange={(ev) => {
@@ -9,9 +9,7 @@ const Textarea = ({ value, onChange, ...rest }) => (
         onChange(ev.target.value, ev)
       }
     }}
-  >
-    { value }
-  </textarea>
+  ></textarea>
 )
 
 export default Textarea
