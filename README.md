@@ -23,4 +23,4 @@ checkmark (`src/components/Checkmark.js`) if the value is valid.
 
 You can use the validation functions from `src/validation.js`.
 
-Only valid values must ever be written to the global app state.
+Only valid values must ever be propagated and written to the global app state.
