@@ -1,3 +1,3 @@
-import { Text } from './base'
+import { Text, withLabel } from './base'
 
-export default Text
+export default withLabel(Text)
