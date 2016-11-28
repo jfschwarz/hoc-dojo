@@ -57,6 +57,16 @@ class App extends Component {
           </div>
 
           <div>
+            <Email
+              label="The same email address"
+              value={this.state.email}
+              onChange={(email) => {
+                this.setState({ email })
+              }}
+            />
+          </div>
+
+          <div>
             <Phone
               label="Phone number"
               value={this.state.phone}

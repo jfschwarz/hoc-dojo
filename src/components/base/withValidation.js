@@ -7,7 +7,7 @@ export default (WrappedComponent, valid) => (
 		constructor(props) {
 			super(props)
 			this.state = {
-				value : props.value
+				hasFocus: false
 			}
 		}
 
@@ -15,19 +15,22 @@ export default (WrappedComponent, valid) => (
 			const { value, onChange, ...rest } = this.props
 			return (
 				<div>
-					<WrappedComponent {...rest} 
-						value={ this.state.value }
+					<WrappedComponent {...rest}
+						value={ this.state.hasFocus ? undefined : (value || '')}
 						onChange={ (newValue) => {
-							this.setState({value : newValue})
 							if (valid(newValue)) {
 								onChange(newValue)
+							} else if(value != null) {
+								onChange(null)
 							}
 						}}
+						onFocus={() => this.setState({ hasFocus: true })}
+						onBlur={() => this.setState({ hasFocus: false })}
 					/>
-					{ valid(this.state.value) ? <Checkmark/> : "" }
+					{ valid(value) ? <Checkmark/> : "" }
 				</div>
-			)	
+			)
 		}
-	}	
+	}
 
 )
